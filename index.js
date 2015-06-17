@@ -55,8 +55,8 @@
   AdBoxMicroService.prototype.req = function req(path, method, data, headers) {
 
     return curl.req({
-      host: this.api.Address || sails.config.consul.host,
-      port: this.api.Port,
+      host: this.api.ServiceAddress || sails.config.consul.host,
+      port: this.api.ServicePort,
       path: path,
       method: method,
       data: data,
