@@ -1,6 +1,6 @@
 {
   "name": "boxfish-microservice",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Microservice Connector library for the boxfish ads platform",
   "main": "index.js",
   "scripts": {

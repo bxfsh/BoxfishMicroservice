@@ -54,6 +54,12 @@
    */
   AdBoxMicroService.prototype.req = function req(path, method, data, headers) {
 
+    if (!this.api) {
+      var deferred = promise.defer();
+      deferred.reject('Service not defined');
+      return deferred;
+    }
+
     return curl.req({
       host: this.api.ServiceAddress || sails.config.consul.host,
       port: this.api.ServicePort,
