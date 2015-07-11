@@ -61,7 +61,7 @@
     }
 
     return curl.req({
-      host: this.api.ServiceAddress || sails.config.consul.host,
+      host: this.api.Address || sails.config.consul.host,
       port: this.api.ServicePort,
       path: path,
       method: method,
